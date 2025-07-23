@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Faugei Flower Shop</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f5f7ff;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        background-color: #f5f7ff;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #8f8f9d;
+        font-weight: 500;
+      }
+
+      .nav-links a.active {
+        color: #111;
+        font-weight: 600;
+      }
+
+      .cart {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+        color: #000;
+      }
+
+      .cart img {
+        width: 18px;
+        height: 18px;
+      }
+      .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 100px;
+        background-color: #f5f7ff;
+      }
+
+      .banner-text {
+        max-width: 500px;
+      }
+
+      .banner-text h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #111;
+      }
+
+      .banner-text .highlight {
+        color: #d55a65;
+
+        /* The color for "FRES FLOWERS" */
+      }
+
+      .banner-text p {
+        font-size: 16px;
+        color: #8f8f9d;
+        line-height: 1.6;
+      }
+
+      .banner-image img {
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="B12A02-Responsive-Flowers/assets/logo.png"
+          alt="Faugei Logo"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="" class="active">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">About us</a></li>
+
+        <div class="cart">
+          <img
+            src="B12A02-Responsive-Flowers/cart-shopping-solid-full.svg"
+            alt="Cart Icon"
+          />
+          <span>Cart ($56)</span>
+        </div>
+      </ul>
+    </nav>
+    <section class="banner">
+      <div class="banner-text">
+        <h1>ALWAYS <span class="highlight">FRESH FLOWERS</span></h1>
+
+        <p>
+          Indulge your senses with the beauty and fragrance of our fresh flower
+          shop. From classic roses to exotic blooms, we offer a wide variety of
+          fresh flowers that are perfect for any occasion.
+        </p>
+      </div>
+
+      <div class="banner-image">
+        <img
+          src="B12A02-Responsive-Flowers/assets/hero-flower.png"
+          alt="Fresh Flowers"
+        />
+      </div>
+    </section>
+  </body>
+</html>
