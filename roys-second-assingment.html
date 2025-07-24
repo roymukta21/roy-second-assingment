@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Flower Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         margin: 0;
@@ -246,20 +247,107 @@
   max-width: 700px;
   margin: 0 auto;
       }
+      .deals-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: nowrap;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 30%;
+    }
+
+    .right-column {
+      width: 70%;
+    }
+
+    .deal-card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      height: 48%;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .deal-card:hover {
+      transform: scale(1.02);
+    }
+
+    .deal-content {
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .deal-content h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .deal-content a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .deal-content a:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ✅ Make cards fill full height equally */
+    .left-column,
+    .right-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-column .deal-card {
+      height: 100%;
+    }
 
 
-      @media (max-width: 576px) {
-        .banner img {
-          max-width: 100%;
-        }
+
+    @media (max-width: 576px) {
         .banner {
           flex-direction: column;
-          text-align: center;
+          text-align: left;
+          padding: 20px;
         }
+        .banner-text{
+          order: 2;
+          width: 100%;
+        }
+
+        .banner img {
+          order: 1;
+          width: 100%;
+        }
+        
       }
 
        /* Hide badge on scroll (mobile only) */
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
         .badge.hide-on-scroll {
           opacity: 0;
           pointer-events: none;
@@ -274,7 +362,61 @@
           top: -10px;
           left: 50%;
         }
+
+       
+    /* 🔁 Responsive styles */
+    @media (max-width: 768px) {
+      .deals-container {
+        flex-direction: column;
+        padding: 20px;
       }
+
+      .left-column,
+      .right-column {
+        width: 100%;
+      }
+
+      .deal-card {
+        height: 180px;
+      }
+
+      .deal-content h3 {
+        font-size: 18px;
+      }
+
+      .deal-content a {
+        font-size: 14px;
+      }
+    }
+        /* Display card 2 columns */
+        @media ( max-width: 576px ) {
+        .product-grid{
+          grid-template-columns: repeat(2, 1fr)
+        }
+        }
+
+        /*  Responsive styles */
+         @media (max-width: 768px){
+         .deals-container {
+         flex-direction: column;
+         padding: 20px;
+         }
+
+         .left-column,
+         .right-column {
+         max-width: 100%;
+         }
+
+         .deal-card {
+         height: 180px;
+         }
+
+         .deal-content h3 {
+         font-size: 18px;
+         }
+         }
+
+         }
      </style>
    
   </head>
@@ -440,6 +582,7 @@
             </li>
           </ul>
         </div>
+
       
            
 
@@ -465,32 +608,53 @@
 </div>
 
 <div class="deals-container">
-  <div class="left-column">
-    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-bloom.png');">
-      <div class="deal-content">
-        <h3>60% Off | Bloom Plant</h3>
-        <a href="#">Shop Now</a>
+    <div class="left-column">
+      <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-bloom.png');">
+        <div class="deal-content">
+          <h3>60% Off | Bloom Plant</h3>
+          <a href="">Shop Now</a>
+        </div>
+      </div>
+      <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-ana.png');">
+        <div class="deal-content">
+          <h3>30% Off | Ana Plant</h3>
+          <a href="#">Shop Now</a>
+        </div>
       </div>
     </div>
-    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-ana.png');">
-      <div class="deal-content">
-        <h3>30% Off | Ana Plant</h3>
-        <a href="#">Shop Now</a>
+
+    <div class="right-column">
+      <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-zabo.png');">
+        <div class="deal-content">
+          <h3>25% Off | Zabo Plant</h3>
+          <a href="#">Shop Now</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="right-column">
-    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-zabo.png');">
-      <div class="deal-content">
-        <h3>25% Off | Zabo Plant</h3>
-        <a href="#">Shop Now</a>
-      </div>
+<section class="relative bg-cover bg-center bg-no-repeat h-screen" style="background-image: url('B12A02-Responsive-Flowers/assets/news-letter-bg.png');">
+  <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center px-4">
+    <div class="text-center w-full max-w-xl">
+      <h1 class="text-white text-3xl md:text-5xl font-bold mb-6">Join the colorful Bunch</h1>
+      <form class="flex flex-col sm:flex-row items-center gap-3">
+        <input
+          type="email"
+          placeholder="Write email"
+          class="w-full sm:flex-1 px-4 py-3 rounded sm:rounded-l-md sm:rounded-r-none text-gray-800 focus:outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="w-full sm:w-auto px-6 py-3 bg-orange-600 text-white font-semibold rounded sm:rounded-r-md sm:rounded-l-none hover:bg-orange-700 transition"
+        >
+          Subscribe
+        </button>
+      </form>
     </div>
   </div>
-</div>
+</section>
 
 
-
-  </body>
+</body>
 </html>

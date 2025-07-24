@@ -36,10 +36,7 @@
 
 - centered **Title and subtitle** as Figma
 - **8 cards with 4 Collumn View** with image, name, price, and Add to cart button
-- **Mobile Responsiveness:**
-  - Display Cards in 2 Collumn
-
----
+- ***
 
 ### 4. Plants Lover Section
 
