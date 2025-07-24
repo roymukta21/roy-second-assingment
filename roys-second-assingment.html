@@ -122,7 +122,7 @@
 
       .product-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
         gap: 20px;
       }
 
@@ -158,12 +158,95 @@
         cursor: pointer;
         font-weight: bold;
         border-radius: 4px;
-        transition: background 0.3s;
+        background: 0.3s;
       }
 
       .add-to-cart:hover {
         background-color: #d9541b;
       }
+
+      .flower-lover {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f6fa;
+      }
+
+      .flower-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        position: relative;
+      }
+
+      .flower-image {
+        flex: 1 1 300px;
+        max-width: 500px;
+        position: relative;
+      }
+
+      .flower-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .badge {
+        position: absolute;
+        top: -150px;
+        left: 100%;
+        transform: translateX(-50%);
+        width: 10px;
+        transition: opacity 0.3s ease;
+      }
+
+      .flower-content {
+        flex: 1 1 300px;
+        padding: 20px;
+        max-width: 600px;
+      }
+
+      .flower-content h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .flower-content ul {
+        padding-left: 20px;
+      }
+
+      .flower-content li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #555;
+      }
+
+      .latest-deals-section {
+       background-color: #f6f8fe; /* Light background */
+       text-align: center;
+       padding: 60px 20px;
+       font-family: Arial, sans-serif;
+      }
+
+      .latest-deals-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+      }
+
+      .latest-deals-section .highlight {
+  color: #ec6707; /* Orange color for "Latest" */
+      }
+
+      .latest-deals-section p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+      }
+
 
       @media (max-width: 576px) {
         .banner img {
@@ -174,10 +257,29 @@
           text-align: center;
         }
       }
-    </style>
+
+       /* Hide badge on scroll (mobile only) */
+      @media (max-width: 768px) {
+        .badge.hide-on-scroll {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .flower-section {
+          flex-direction: column;
+          padding-top: 80px;
+        }
+
+        .badge {
+          top: -10px;
+          left: 50%;
+        }
+      }
+     </style>
+   
   </head>
   <body>
-    <nav class="navbar">
+     <nav class="navbar">
       <div class="logo">
         <img src="B12A02-Responsive-Flowers/assets/logo.png" alt=" Logo" />
       </div>
@@ -299,5 +401,96 @@
         </div>
       </div>
     </div>
+
+    <div class="flower-lover">
+       <div class="flower-section"     id="flowerSection">
+         <div class="flower-image">
+          <img
+            src="B12A02-Responsive-Flowers/assets/flower-store.png"
+            alt="Flower Top View"
+          />
+          <img
+            src="B12A02-Responsive-Flowers/assets/trusted-badge.png"
+            class="badge"
+            id="trustedBadge"
+            alt="Trusted Seller Badge"
+          />
+        </div>
+
+        <div class="flower-content">
+          <h2>Flower & Plants Lover</h2>
+          <ul>
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop. From classic roses to    variety of fresh.
+            </li>
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop. From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li>
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop. From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li><li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop. From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li>
+          </ul>
+        </div>
+      
+           
+
+      <script>
+        const badge = document.getElementById("trustedBadge");
+
+        window.addEventListener("scroll", () => {
+          if (window.innerWidth <= 768) {
+            badge.classList.add("hide-on-scroll");
+          } else {
+            badge.classList.remove("hide-on-scroll");
+          }
+        });
+      </script>
+    </div>
+
+    <div class="latest-deals-section">
+  <h2><span class="highlight">Latest</span> Deals</h2>
+  <p>
+    Indulge your senses with the beauty and fragrance of our fresh flower shop. <br>
+    From classic roses to exotic blooms, we offer a wide variety of fresh.
+  </p>
+</div>
+
+<div class="deals-container">
+  <div class="left-column">
+    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-bloom.png');">
+      <div class="deal-content">
+        <h3>60% Off | Bloom Plant</h3>
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-ana.png');">
+      <div class="deal-content">
+        <h3>30% Off | Ana Plant</h3>
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-column">
+    <div class="deal-card" style="background-image: url('B12A02-Responsive-Flowers/assets/deal-zabo.png');">
+      <div class="deal-content">
+        <h3>25% Off | Zabo Plant</h3>
+        <a href="#">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
   </body>
 </html>
