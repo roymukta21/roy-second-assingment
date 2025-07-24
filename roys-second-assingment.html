@@ -106,8 +106,9 @@
         text-align: center;
       }
 
-      h1 {
-        font-size: 36px;
+      .container>h1 {
+        font-weight: bold;
+        font-size: 50px;
         margin-bottom: 10px;
       }
 
@@ -167,6 +168,7 @@
       }
 
       .flower-lover {
+        position: relative;
         margin: 0;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f5f6fa;
@@ -214,6 +216,7 @@
       }
 
       .flower-content ul {
+        list-style-type: disc;
         padding-left: 20px;
       }
 
@@ -542,7 +545,7 @@
           <button class="add-to-cart">ADD TO CART</button>
         </div>
       </div>
-    </div>
+    </div> 
 
     <div class="flower-lover">
        <div class="flower-section"     id="flowerSection">
@@ -551,7 +554,7 @@
             src="B12A02-Responsive-Flowers/assets/flower-store.png"
             alt="Flower Top View"
           />
-          <img
+          <img 
             src="B12A02-Responsive-Flowers/assets/trusted-badge.png"
             class="badge"
             id="trustedBadge"
@@ -654,6 +657,49 @@
     </div>
   </div>
 </section>
+
+<footer class="bg-gray-100 py-10 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col items-start md:flex-row md:justify-between gap-10">
+    
+    
+    <div class="flex flex-col items-start md:items-start gap-4">
+      <img src="B12A02-Responsive-Flowers/assets/logo.png" alt="Faugei Logo" class="h-10 w-auto" />
+      <p class="text-gray-600 text-sm max-w-xs">
+        Indulge your senses with the beauty and fragrance of our fresh flower shop.
+      </p>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-800">
+      <div class="flex flex-col gap-2">
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Blog</a>
+        <a href="">FAQ</a>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="">Features</a>
+        <a href="">Pricing</a>
+        <a href="">Privacy Policy</a>
+      </div>
+      <div class="flex flex-col gap-2">
+        <a href="">Terms of Service</a>
+        <a href="">Help Center</a>
+      </div>
+    </div>
+
+   
+    <div class="flex gap-4 md:justify-end pt-4 md:pt-0">
+      <a href=""><img src="B12A02-Responsive-Flowers/assets/icon-linkedin.png" alt="LinkedIn" class="h-6 w-6" /></a>
+      <a href=""><img src="B12A02-Responsive-Flowers/assets/icon-twitter.png" alt="X" class="h-6 w-6" /></a>
+      <a href=""><img src="B12A02-Responsive-Flowers/assets/icon-facebook.png" alt="Facebook" class="h-6 w-6" /></a>
+      <a href=""><img src="B12A02-Responsive-Flowers/assets/icon-youtube.png" alt="YouTube" class="h-6 w-6" /></a>
+    </div>
+    
+  </div>
+</footer>
+
 
 
 </body>
