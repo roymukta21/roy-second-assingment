@@ -124,7 +124,7 @@
 
       .product-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
       }
 
@@ -331,7 +331,7 @@
 
 
 
-    @media (max-width: 576px) {
+    @media (width >= 40rem) {
         .banner {
           flex-direction: column;
           text-align: left;
@@ -345,6 +345,11 @@
         .banner img {
           order: 1;
           width: 100%;
+        }
+
+        .product-grid{
+          display: grid !important;
+          grid-template-columns: repeat(2, 1fr)!important
         }
         
       }
@@ -365,45 +370,29 @@
           top: -10px;
           left: 50%;
         }
-
-       
-    /* 🔁 Responsive styles */
-    @media (max-width: 768px) {
-      .deals-container {
+         
+         /* 🔁 Responsive styles */
+        .deals-container {
         flex-direction: column;
         padding: 20px;
-      }
+        }
 
-      .left-column,
-      .right-column {
+        .left-column,
+        .right-column {
         width: 100%;
-      }
+        }
 
-      .deal-card {
+        .deal-card {
         height: 180px;
-      }
+        }
 
-      .deal-content h3 {
+       .deal-content h3 {
         font-size: 18px;
-      }
+       }
 
-      .deal-content a {
+       .deal-content a {
         font-size: 14px;
-      }
-    }
-        /* Display card 2 columns */
-        @media ( max-width: 576px ) {
-        .product-grid{
-          grid-template-columns: repeat(2, 1fr)
         }
-        }
-
-        /*  Responsive styles */
-         @media (max-width: 768px){
-         .deals-container {
-         flex-direction: column;
-         padding: 20px;
-         }
 
          .left-column,
          .right-column {
@@ -418,8 +407,11 @@
          font-size: 18px;
          }
          }
+      
+      
+        
 
-         }
+         
      </style>
    
   </head>
@@ -481,7 +473,7 @@
         </div>
 
         <div class="product">
-          <img 
+          <img
             src="B12A02-Responsive-Flowers/assets/sample-flower-image.png"
             alt="Lily Blossom"
           />
@@ -554,7 +546,7 @@
             src="B12A02-Responsive-Flowers/assets/flower-store.png"
             alt="Flower Top View"
           />
-          <img
+          <img 
             src="B12A02-Responsive-Flowers/assets/trusted-badge.png"
             class="badge"
             id="trustedBadge"
